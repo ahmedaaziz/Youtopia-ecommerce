@@ -1,0 +1,118 @@
+// header {
+//   nav {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+
+//     .header-wrapper {
+//       display: flex;
+//       justify-content: space-between;
+//     ul {
+//       display: flex;
+//       flex-direction: row;
+//     }
+
+//     ul.nav-links {
+//       margin-left: 0;
+//       margin-bottom: 0;
+//       li {
+//         margin: 10px;
+//         a {
+//           color: var(--gray);
+//           font-weight: var(--weight-500);
+//         }
+//       }
+//     }
+
+//     .nav-links {
+//       button {
+//         color: var(--blue);
+//         font-weight: var(--weight-700);
+//       }
+//     }
+//     }
+
+//   }
+// }
+
+.site-header {
+    padding: 0 15px;
+    &___wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        .brand {}
+        ul{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 0;
+          padding-right: 2rem;
+          li {
+            margin: 10px;
+            a {
+              color: var(--gray);
+              font-weight: var(--weight-500);
+            }
+          }
+
+        }
+        .nav-links {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 0;
+          padding-left: 0;
+            button {
+              color: var(--blue);
+              font-weight: var(--weight-700);
+              transition: all 0.3s ease-in-out;
+              &:hover{
+                background: var(--blue);
+                color: var(--white);
+                border: 1px solid var(--white);
+              }
+            }
+            .my-cart {
+              position: relative;
+            }
+            .myCart--btn{
+              position: relative;
+              box-shadow:1px 2px 4px 1px hsla(218, 100%, 60%, 0.3);
+              border:none
+            }
+            .myCart--btn__counter {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: var(--red);
+                width: 28px;
+                height: 28px;
+                color: var(--white);
+                text-align: center;
+                border-radius: 50%;
+                font-size: 14px;
+                font-weight: var(--weight-700);
+                padding: 5px;
+              }
+
+        }
+        .right-side {
+          margin-left: auto;
+        }
+
+    }
+    .main-search {
+        flex: 0.7;
+        padding: 0 2rem;
+        margin: auto;
+        input {
+            background: hsla(240, 9%, 94%, 1);
+            border-radius: 20px;
+            font-size: 16px;
+            color: var(--dark-gray);
+        }
+    }
+
+  }
