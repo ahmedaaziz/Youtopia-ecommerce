@@ -1,4 +1,4 @@
 export const environment = {
-  baseUrl:'',
+  baseUrl:'https://api.escuelajs.co/api/',
   production:false
 }

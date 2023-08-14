@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="wrapper site-header___wrapper">
-        <a href="#" class="brand">
+        <a routerLink="/" class="brand">
           <img src="../../../../assets/images/Logo.png" alt="Logo">
         </a>
         <ul >
@@ -14,7 +14,7 @@
           <li><a href="#">Consumer Electronics</a></li>
         </ul>
         <div class="nav-links right-side">
-          <button type="button" class="btn btn--plain">
+          <button type="button" class="btn btn--plain" [routerLink]="['/login']">
             Sign in
           </button>
           <div class="my-cart">

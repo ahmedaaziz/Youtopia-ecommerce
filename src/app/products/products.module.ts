@@ -5,17 +5,22 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from "../shared/shared.module";
 
 
 @NgModule({
   declarations: [
     AllProductsComponent,
     ProductComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    HttpClientModule,
+    SharedModule
   ]
 })
 export class ProductsModule { }
