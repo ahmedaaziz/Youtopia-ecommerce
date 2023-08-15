@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SharedModule } from "./shared/shared.module";
 import { RouterModule } from "@angular/router";
+import { ProductsModule } from "./products/products.module";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AuthModule } from "./auth/auth.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +19,11 @@ import { RouterModule } from "@angular/router";
     AppRoutingModule,
     FontAwesomeModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    ProductsModule,
+    AuthModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

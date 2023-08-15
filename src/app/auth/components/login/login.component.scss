@@ -30,11 +30,11 @@
     align-self: center;
     margin: 0 auto;
     form{
-    width: 410px;
+    width: 400px;
     margin: 0 auto;
       input {
         border-radius: 20px;
-        padding: 5px 10px;
+        padding:10px;
         border: 1px solid var(--gray);
       }
       label {
@@ -43,6 +43,7 @@
       }
       margin: 0 auto;
       button[type=submit]{
+        background-color:var(--purple);
         color: var(--white);
         font-family: 'Inter',sans-serif;
         font-weight: var(--weight-700);
@@ -56,6 +57,21 @@
           background-color: var(--dark-purple);
         }
       }
+
+      .eyeIcon {
+        color: var(--purple);
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 15px;
+        cursor: pointer;
+      }
     }
   }
+}
+
+
+
+@media screen and (min-width:800px) {
+
 }
