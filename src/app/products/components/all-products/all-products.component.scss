@@ -1,0 +1,31 @@
+.shopka-products{
+  font-family: 'Inter',sans-serif;
+  .product-filteration{
+    background: var(--bright-gray);
+    padding: 10px 15px;
+    color: var(--dark-gray);
+    font-weight: var(--weight-500);
+    font-size: 16px;
+    .form-check {
+      margin: 15px 0;
+      input[type=checkbox] {
+        border: 2px solid var(--dark-gray);
+      }
+    }
+  }
+  .product-wrapper {
+    position: relative;
+    // box-shadow: 1px 1px 2px 1px hsl(236, 8%, 60%);
+    box-shadow: 0px 0px 2px 0px hsl(236 8% 70% / 1);
+    padding: 2rem;
+    margin-bottom: 4rem;
+  }
+
+}
+.product{
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0px 0px 2px 0px hsl(236 8% 70% / 1);
+
+  }
+}

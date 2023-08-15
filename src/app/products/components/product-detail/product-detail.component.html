@@ -1,1 +1,35 @@
-<p>product-detail works!</p>
+<section class="product-details">
+  <div class="product-details__image" [ngStyle]="{'background-image':'url('+productDetails.image+')'}"></div>
+  <div class="product-details_informations">
+    <ng-container *ngIf="productDetails.id % 3 == 1">
+    <div class="details_heading">
+      <div class="deal alert--hot">HOT SALE</div>
+    </div>
+    </ng-container>
+
+    <div class="details_heading title">
+      <h1>
+        {{productDetails.title}}
+      </h1>
+    </div>
+    <div class="details_heading second-heading d-flex justify-content-between">
+      <div class="category">
+        <p>{{productDetails.category | uppercase }}</p>
+      </div>
+      <div class="rating">
+        {{productDetails?.rating?.rate}} <span>({{productDetails?.rating.count}} reviews)</span>
+      </div>
+    </div>
+
+    <div class="product-detail_desc">
+      <p><strong>Decription:</strong></p>
+      <p> {{productDetails.description}} </p>
+    </div>
+
+    <div class="product-catalog-images"></div>
+    <div class="product-sizing">
+    </div>
+
+
+  </div>
+</section>

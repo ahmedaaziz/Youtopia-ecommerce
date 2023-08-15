@@ -5,13 +5,15 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { RouterModule } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
+import { SortByComponent } from './components/sort-by/sort-by.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SortByComponent
   ],
   imports: [
     CommonModule,

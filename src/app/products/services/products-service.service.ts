@@ -6,14 +6,18 @@ import { environment } from './../../../environments/environment';
   providedIn: 'root'
 })
 export class ProductsServiceService {
-
+  url:string = environment.baseUrl;
   constructor(private http:HttpClient) { }
 
   getAllProducts(){
-    return this.http.get(environment.baseUrl+'v1/products')
+    return this.http.get(this.url)
   }
 
   getProductById(id:number){
-    return this.http.get(`${environment.baseUrl}+'v1/products'${id}`)
+    return this.http.get(this.url+id)
+  }
+
+  getAllCategories(){
+    return this.http.get(`${this.url}/categories`)
   }
 }

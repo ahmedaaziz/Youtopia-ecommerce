@@ -1,0 +1,89 @@
+  .product {
+    margin-bottom: 10px;
+    color: var(--dark-gray);
+
+    a {
+      color:var(--dark-gray);
+    }
+    &-img {
+      overflow: hidden;
+      width: 100%;
+      max-width: 227px;
+      height: 224px;
+      margin: auto;
+      padding: 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-width: 100%;
+      }
+    }
+    &-title {
+      min-height: 70px;
+      margin-top: 10px;
+
+      h2 {
+        font-family: 'Inter',sans-serif;
+        font-weight: var(--weight-400);
+        color: var(--dark-gray);
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+    &-price {
+      margin-top: 1rem;
+      h3 {
+        font-weight: var(--weight-700);
+        color: var(--dark-gray);
+
+      }
+
+      .deal {
+        font-size: .75rem;
+        font-size: 0.75rem;
+        padding: 5px 10px;
+        border-radius: 5px;
+        }
+      .alert--danger {
+        background: var(--bright-pink);
+        color: var(--pink);
+      }
+    }
+    &-desc {
+      min-height: 41px;
+      p {
+        color: var(--gray);
+        font-size: 14px;
+      }
+    }
+    &-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px;
+      &__watch {
+        padding: 5px 10px;
+        border: 2px solid var(--bright-blue);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        color: var(--blue);
+        font-size: 14px;
+        fa-icon {
+          color: var(--blue);
+          font-size: 16px;
+        }
+
+        &:hover {
+          background: var(--blue);
+          color: var(--white);
+          border: 2px solid var(--white);
+            fa-icon {
+              color: var(--white);
+              }
+        }
+
+      }
+    }
+  }

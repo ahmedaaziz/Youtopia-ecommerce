@@ -7,6 +7,7 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from "../shared/shared.module";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SharedModule } from "../shared/shared.module";
     CommonModule,
     ProductsRoutingModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    FontAwesomeModule
   ]
 })
 export class ProductsModule { }
