@@ -4,9 +4,7 @@
     </div>
             <div class="product-title">
                 <h2>
-                    {{data.title.length}}
-                    /
-                    {{ (data.title.length > 60) ? (data.title | slice : 0:60) + "..":data.title }}
+                  {{ (data.title.length > 60) ? (data.title | slice : 0:60) + "..":data.title }}
 
                 </h2>
             </div>
