@@ -12,6 +12,7 @@
         <div class="form-check-container" *ngFor="let category of categories;let i = index" >
           <app-filter-category [data]="category" [index]="i+1" (selectedCategory)="filterProductsByCategory($event)"></app-filter-category>
         </div>
+
       </div>
       <div class="product-filteration">
         <div class="product-filteration__heading d-flex justify-content-between">

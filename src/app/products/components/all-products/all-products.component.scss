@@ -19,6 +19,7 @@
 
 .product{
   transition: all 0.3s ease-in-out;
+  margin-bottom: 1rem;
   &:hover {
     box-shadow: 0px 0px 2px 0px hsl(236 8% 70% / 1);
 

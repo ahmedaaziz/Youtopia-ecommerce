@@ -1,4 +1,3 @@
-import { HttpClient } from "@angular/common/http";
 import { Component, OnInit } from '@angular/core';
 import { ProductsServiceService } from "../../services/products-service.service";
 import { ActivatedRoute } from "@angular/router";
@@ -12,7 +11,9 @@ export class ProductDetailComponent implements OnInit{
   id:any;
   isLoaded:boolean = false;
   productDetails:any;
-  constructor(
+ cartProducts:any[] = []
+ amount:number = 0;
+ constructor(
     private productService:ProductsServiceService,
     private route:ActivatedRoute,
   ){
@@ -37,5 +38,22 @@ export class ProductDetailComponent implements OnInit{
       }),
       complete:(()=>{})
     })
+  }
+  addToCart(event:any){
+    console.log(event)
+    if('cart' in localStorage) {
+      this.cartProducts = JSON.parse(localStorage.getItem('cart')!);
+      let exist = this.cartProducts.find(cartProduct => cartProduct.item.id === event.id);
+      console.log(exist)
+      if(exist){
+        console.log('product is existed');
+      } else {
+        this.cartProducts.push(event);
+        localStorage.setItem('cart',JSON.stringify(this.cartProducts))
+      }
+    } else {
+      this.cartProducts.push(event);
+      localStorage.setItem('cart',JSON.stringify(this.cartProducts)!);
+    }
   }
 }

@@ -12,6 +12,8 @@ import { FilterCategoryComponent } from './components/filter-category/filter-cat
 import { FiterPricesComponent } from './components/filter-prices/filter-prices.component';
 import { SortProductsComponent } from './components/sort-products/sort-products.component';
 import { StarRatingModule } from 'angular-star-rating';
+import { CartBarComponent } from './components/cart-bar/cart-bar.component';
+import { FormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import { StarRatingModule } from 'angular-star-rating';
     FilterCategoryComponent,
     FiterPricesComponent,
     SortProductsComponent,
+    CartBarComponent,
 
   ],
   imports: [
@@ -29,6 +32,7 @@ import { StarRatingModule } from 'angular-star-rating';
     ProductsRoutingModule,
     HttpClientModule,
     SharedModule,
+    FormsModule,
     FontAwesomeModule,
     StarRatingModule.forRoot()
   ]
