@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="form-group sort-product">
+        <span>Sort by</span>
+        <select class="form-select" (change)="detectChanges($event)">
+            <span>Sort by</span>
+            <option value="All">All</option>
+            <option value="price_asc">Price (Lowest to Highest)</option>
+            <option value="price_desc">Price (Highest to Lowest) </option>
+            <option value="rating_asc">Rating (Highest to Lowest)</option>
+            <option value="rating_desc">Rating (Lowest to Highest)</option>
+        </select>
+    </div>
+</div>
