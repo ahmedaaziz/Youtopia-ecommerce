@@ -1,0 +1,41 @@
+<div class="cart-bar">
+  <div class="product-info">
+    <div class="product-info__image">
+      <img [src]="productDetails.image" alt="">
+    </div>
+    <div class="product-info__title">
+      <h1>
+        {{productDetails.title}}
+      </h1>
+    </div>
+  </div>
+  <div class="quantity">
+    <span>QTY: </span>
+          <button
+          class="btn btn-dark"
+          [disabled]="buttonDisabled"
+          >+</button>
+          <input
+          type="number"
+          name="" id=""
+          min="1"
+          [disabled]="buttonDisabled"
+          [(ngModel)]="amount"
+          class="form-control">
+          <button
+          class="btn btn-dark"
+          [disabled]="buttonDisabled"
+          >-</button>
+
+  </div>
+  <div class="addToCart">
+    <button
+    class="btn btn--state-success"
+    (click)="addProductToCart($event.target,'Added To Cart')"
+    [disabled]="buttonDisabled"
+    >
+    {{buttonDisabled == true ? 'Added to Card' : 'Add To Card'}}
+
+    </button>
+  </div>
+</div>
