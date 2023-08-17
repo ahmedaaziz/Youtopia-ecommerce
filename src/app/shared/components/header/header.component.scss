@@ -12,7 +12,7 @@ header {
     }
     .navbar__items{
       display: flex;
-
+      transition: all 0.2s ease-in-out;
       .navbar__link {
         padding-right: 8px;
         margin:0 1rem;
@@ -114,6 +114,10 @@ header {
       }
     }
   }
+    .opened{
+        display: initial;
+    }
+
   .navbar__items--right{
     margin: 0 auto;
   }
