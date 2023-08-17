@@ -6,12 +6,6 @@
     color: var(--dark-gray);
     font-weight: var(--weight-500);
     font-size: 16px;
-    .form-check {
-      margin: 15px 0;
-      input[type=checkbox] {
-        border: 2px solid var(--dark-gray);
-      }
-    }
   }
   .product-wrapper {
     position: relative;
@@ -22,6 +16,7 @@
   }
 
 }
+
 .product{
   transition: all 0.3s ease-in-out;
   &:hover {

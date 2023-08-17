@@ -24,10 +24,13 @@ export class ProductDetailComponent implements OnInit{
   }
 
   getProduct(id:number){
+    this.isLoaded = true;
     this.productService.getProductById(id).pipe().subscribe({
       next:((data)=>{
         console.log(data)
         this.productDetails = data
+        this.isLoaded = false;
+
       }),
       error:((err)=>{
         console.error(err);

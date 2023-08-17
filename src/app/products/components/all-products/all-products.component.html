@@ -1,53 +1,30 @@
 <section class="shopka-products">
   <div class="container">
-  <div class="row">
-    <div class="col-4">
+  <div class="row justify-content-between">
+    <div class="col-md-3">
+
       <div class="product-filteration mb-4">
         <div class="product-filteration__heading d-flex justify-content-between">
           <p>Categories</p>
-          <span><fa-icon [icon]="up"></fa-icon></span>
+          <span><fa-icon icon="chevron-up"></fa-icon></span>
         </div>
-        <div class="form-check" *ngFor="let category of categories;let index = index">
-          <input
-          class="form-check-input"
-          type="checkbox" [id]="index"
-          [name]="category" [value]="category">
 
-          <label [for]="index" class="form-check-label">
-            {{category}}
-          </label>
+        <div class="form-check-container" *ngFor="let category of categories;let i = index" >
+          <app-filter-category [data]="category" [index]="i+1" (selectedCategory)="filterProductsByCategory($event)"></app-filter-category>
         </div>
       </div>
       <div class="product-filteration">
         <div class="product-filteration__heading d-flex justify-content-between">
           <p>Expanded Filters</p>
-          <span><fa-icon [icon]="up"></fa-icon></span>
+          <span><fa-icon icon="chevron-up"></fa-icon></span>
         </div>
-        <div class="form-check">
-          <input
-          class="form-check-input"
-          type="checkbox" id="index"
-          name="category" value="category">
-
-          <label for="index" class="form-check-label">
-            Price 100 -> 300
-          </label>
-        </div>
-        <div class="form-check">
-          <input
-          class="form-check-input"
-          type="checkbox" id="index"
-          name="category" value="category">
-
-          <label for="index" class="form-check-label">
-            Price 200 -> 400
-          </label>
-        </div>
+          <app-filter-prices (selectedPrice)="filterPrice($event)"></app-filter-prices>
       </div>
     </div>
-    <div class="col-8 product-wrapper">
+    <div class="col-md-8 product-wrapper">
+      <app-sort-products (selectedValue)="sortProduct($event)"></app-sort-products>
       <div class="row"  *ngIf="!isLoading">
-        <div class="col-md-4 col-sm-12 product"
+        <div class="col col-md-6 col-lg-4 col-sm-12 product"
          *ngFor="let item of products">
           <app-product
           [data]="item">

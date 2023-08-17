@@ -1,5 +1,18 @@
-<section class="product-details">
-  <div class="product-details__image" [ngStyle]="{'background-image':'url('+productDetails.image+')'}"></div>
+<ng-container *ngIf="isLoaded">
+  <app-spinner></app-spinner>
+</ng-container>
+
+<section class="product-details" *ngIf="!isLoaded">
+  <div class="product-details__image">
+    <div class="image">
+      <img [src]="productDetails.image" [alt]="productDetails.title" lazy-load="true">
+      <div class="backToHome">
+        <a routerLink="/">
+           <fa-icon icon="arrow-left"></fa-icon>
+           back to list</a>
+      </div>
+    </div>
+    </div>
   <div class="product-details_informations">
     <ng-container *ngIf="productDetails.id % 3 == 1">
     <div class="details_heading">
