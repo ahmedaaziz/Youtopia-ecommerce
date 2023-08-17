@@ -1,8 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('/node_modules/css-star-rating/css/star-rating.min.css');
 @import url('./assets/styles/_reset.scss');
 @import url('./assets/styles/_helpers.scss');
 @import url('./assets/styles/_variables.scss');
-
 body {
   font-family: 'Quicksand', sans-serif;
+}
+
+/**/
+
+.rating.color-negative .star-container .star {
+  svg {
+    fill: var(--rating) !important;
+  }
+  i {
+    color:  var(--rating) !important;
+  }
+}
+
+.rating.color-ok .star-container .star {
+  svg {
+    fill:  var(--rating)!important
+  }
+  i {
+    color:  var(--rating)!important
+  }
+}
+
+.rating.color-positive .star-container .star {
+  svg {
+    fill: var(--rating) !important;
+  }
+  i {
+    color: var(--rating) !important;
+  }
+}
+
+.rating.color-default .star-container .star {
+  svg {
+    fill: var(--rating) !important;
+  }
+  i {
+    color: var(--rating) !important;
+  }
 }

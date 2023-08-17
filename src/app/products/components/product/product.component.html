@@ -27,7 +27,7 @@
 
         <div class="product-actions">
             <div class="product-actions__rating">
-                {{data.rating.rate}}
+              <star-rating [starType]="'svg'" [rating]="data.rating?.rate"></star-rating>
             </div>
             <div class="product-actions__watch">
                 <fa-icon [icon]="favorite"></fa-icon>

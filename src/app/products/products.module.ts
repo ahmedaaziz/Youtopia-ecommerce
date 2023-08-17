@@ -11,6 +11,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { FilterCategoryComponent } from './components/filter-category/filter-category.component';
 import { FiterPricesComponent } from './components/filter-prices/filter-prices.component';
 import { SortProductsComponent } from './components/sort-products/sort-products.component';
+import { StarRatingModule } from 'angular-star-rating';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { SortProductsComponent } from './components/sort-products/sort-products.
     ProductsRoutingModule,
     HttpClientModule,
     SharedModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    StarRatingModule.forRoot()
   ]
 })
 export class ProductsModule { }

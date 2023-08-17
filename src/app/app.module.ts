@@ -12,7 +12,7 @@ import { AuthModule } from "./auth/auth.module";
 import { httpInterceptorsProviders } from "./shared/interceptoprs";
 import { faArrowLeft, faArrowRight, faBars, faChevronDown, faChevronLeft, faChevronUp, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { StarRatingModule } from 'angular-star-rating';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AuthModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    StarRatingModule.forRoot()
   ],
   providers:[httpInterceptorsProviders],
   bootstrap: [AppComponent]
