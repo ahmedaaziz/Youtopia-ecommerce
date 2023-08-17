@@ -30,5 +30,5 @@
 .btn--plain {
   background: var(--white);
   margin: 10px;
-  border: 1px solid var(--blue);
+  border: 1px solid var(--blue) !important;
 }

@@ -1,9 +1,9 @@
-<header class="site-header">
+<!-- <header class="site-header">
   <div class="wrapper site-header___wrapper">
         <a routerLink="/" class="brand">
           <img src="../../../../assets/images/Logo.png" alt="Logo">
         </a>
-        <ul >
+        <ul class="navbar__items">
           <li><a href="#">Sell on Shopka</a></li>
           <li><a href="#">Register</a></li>
         </ul>
@@ -13,24 +13,68 @@
         <ul>
           <li><a href="#">Consumer Electronics</a></li>
         </ul>
-        <div class="nav-links right-side">
+        <div class="nav-links navbar__items right-side">
           <button type="button" class="btn btn--plain" [routerLink]="['/login']">
             Sign in
           </button>
-          <div class="my-cart">
-            <button type="button" class="btn btn--plain myCart--btn">
-              My Cart
-            </button>
-            <div class="myCart--btn__counter">
-              <p>
-                0
-              </p>
-            </div>
-          </div>
         </div>
         <div class="user__img">
           <img src="../../../../assets/images/user.png" alt="user_name">
         </div>
 
+  </div>
+</header> -->
+
+<header>
+  <div class="header-wrapper">
+    <div class="brand">
+      <a routerLink="/" class="brand">
+        <img src="../../../../assets/images/Logo.png" alt="Logo">
+      </a>
+    </div>
+    <div class="navbar__link navbar__link-toggle">
+      <fa-icon icon="bars"></fa-icon>
+    </div>
+
+    <nav class="navbar__items">
+      <div class="navbar__link">
+        <a href="">Sell on Shopka</a>
+      </div>
+      <div class="navbar__link">
+        <a href="">Register</a>
+      </div>
+    </nav>
+    <nav class="navbar__items navbar__items--search">
+      <div class="main-search navbar__link">
+        <input type="text" name="" id="" class="form-control" placeholder="Search for products ...">
+      </div>
+    </nav>
+    <nav class="navbar__items navbar__items--right">
+      <div class="navbar__link">
+          <button type="button" class="btn btn--plain" [routerLink]="['/login']">
+            Sign in
+          </button>
+
+      </div>
+      <div class="navbar__link">
+          <div class="my-cart">
+            <button type="button" class="btn btn--plain myCart--btn">
+              My Cart
+                <div class="myCart--btn__counter">
+                  <p>
+                    0
+                  </p>
+                </div>
+            </button>
+
+          </div>
+      </div>
+      <div class="navbar__link">
+        <div class="user__img">
+          <img src="../../../../assets/images/user.png" alt="user_name">
+        </div>
+      </div>
+
+    </nav>
   </div>
 </header>
