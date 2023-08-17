@@ -6,6 +6,8 @@ import { RouterModule } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { SortByComponent } from './components/sort-by/sort-by.component';
+import { httpInterceptorsProviders } from "./interceptoprs";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 
 
@@ -19,13 +21,15 @@ import { SortByComponent } from './components/sort-by/sort-by.component';
     CommonModule,
     RouterModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
 
   ],
   exports:[
     HeaderComponent,
     SpinnerComponent
 
-  ]
+  ],
+
 })
 export class SharedModule { }

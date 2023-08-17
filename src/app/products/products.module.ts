@@ -8,6 +8,9 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from "../shared/shared.module";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { FilterCategoryComponent } from './components/filter-category/filter-category.component';
+import { FiterPricesComponent } from './components/filter-prices/filter-prices.component';
+import { SortProductsComponent } from './components/sort-products/sort-products.component';
 
 
 @NgModule({
@@ -15,6 +18,9 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
     AllProductsComponent,
     ProductComponent,
     ProductDetailComponent,
+    FilterCategoryComponent,
+    FiterPricesComponent,
+    SortProductsComponent,
 
   ],
   imports: [
