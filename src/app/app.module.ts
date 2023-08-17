@@ -10,8 +10,9 @@ import { ProductsModule } from "./products/products.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AuthModule } from "./auth/auth.module";
 import { httpInterceptorsProviders } from "./shared/interceptoprs";
-import { faArrowRight, faChevronDown, faChevronUp, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faArrowRight, faBars, faChevronDown, faChevronLeft, faChevronUp, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,22 @@ import { faHeart } from "@fortawesome/free-regular-svg-icons";
     ProductsModule,
     AuthModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers:[httpInterceptorsProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(library:FaIconLibrary){
-    library.addIcons(faArrowRight,faEyeSlash,faHeart,faChevronUp,faChevronDown)
+    library.addIcons(
+      faArrowRight,
+      faEyeSlash,
+      faHeart,
+      faChevronUp,
+      faChevronDown,
+      faChevronLeft,
+      faArrowLeft,
+      faBars)
  }
 }
