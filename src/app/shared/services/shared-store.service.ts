@@ -5,11 +5,11 @@ import { BehaviorSubject } from "rxjs";
   providedIn: 'root'
 })
 export class SharedStoreService {
-  currentCartLength$:BehaviorSubject<any> = new BehaviorSubject(null)
+  currentCartLength$ :BehaviorSubject<number> = new BehaviorSubject(0)
 
   constructor() { }
     getCurrentCarteLength(){
-      return this.currentCartLength$;
+      return this.currentCartLength$.asObservable();
     }
 
   setCarteLength(value:number){
