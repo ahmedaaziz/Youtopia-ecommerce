@@ -29,7 +29,6 @@ export class AllProductsComponent implements OnInit{
     this.isLoading = true;
     this.productService.getAllProducts().pipe().subscribe({
       next:((response:Product[])=>{
-        // console.log(response);
         this.products = response;
         this.isLoading = false;
       }),
@@ -43,23 +42,20 @@ export class AllProductsComponent implements OnInit{
   getCategories(){
     this.categories$.pipe().subscribe({
       next:((data)=>{
-        // console.log(data)
         this.categories = data;
       }),
       error:((err)=>{
-        console.log(err.message);
+        console.error(err.message);
       }),
       complete:(()=>{})
     });
   }
   filterProducts(value:string){
     this.isLoading = true;
-    console.log(this.products);
   }
 
 
   sortProductByRating(sortingCase:string){
-    console.log('entered >>>');
 
     if(sortingCase === 'rating_asc') {
     console.log( this.products.sort((a:any,b:any) => a.rating.rate - b.rating.rate));

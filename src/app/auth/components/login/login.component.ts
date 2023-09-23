@@ -28,11 +28,9 @@ export class LoginComponent implements OnInit {
   onLogin(form:NgForm){
     this.userInfo = form.value;
     this.setUserData(this.userInfo);
-    console.log(this.userInfo);
 
     this.service.userLogin(this.userInfo).pipe().subscribe({
       next:((data)=>{
-        console.log(data);
       }),
       error:((err)=>{
         console.error(err.message)

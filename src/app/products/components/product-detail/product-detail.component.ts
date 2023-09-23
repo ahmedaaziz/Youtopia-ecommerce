@@ -1,3 +1,4 @@
+import { SharedStoreService } from './../../../shared/services/shared-store.service';
 import { Component, OnInit } from '@angular/core';
 import { ProductsServiceService } from "../../services/products-service.service";
 import { ActivatedRoute } from "@angular/router";
@@ -13,9 +14,11 @@ export class ProductDetailComponent implements OnInit{
   productDetails:any;
  cartProducts:any[] = []
  amount:number = 0;
+ cartLength!:number ;
  constructor(
     private productService:ProductsServiceService,
     private route:ActivatedRoute,
+    private _sharedStore:SharedStoreService
   ){
     this.id = this.route.snapshot.paramMap.get('id');
   }
@@ -50,10 +53,14 @@ export class ProductDetailComponent implements OnInit{
       } else {
         this.cartProducts.push(event);
         localStorage.setItem('cart',JSON.stringify(this.cartProducts))
+        this.cartLength = this.cartProducts.length;
+        this._sharedStore.setCarteLength(this.cartLength)
       }
     } else {
       this.cartProducts.push(event);
       localStorage.setItem('cart',JSON.stringify(this.cartProducts)!);
+      this._sharedStore.setCarteLength(this.cartLength)
+
     }
   }
 }

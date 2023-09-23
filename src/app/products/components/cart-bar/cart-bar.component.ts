@@ -23,8 +23,8 @@ addProductToCart(button:any,word:string){
 checkIfProductInCart(){
   if('cart' in localStorage) {
     this.cartProducts = JSON.parse(localStorage.getItem('cart')!);
-    console.log(this.cartProducts);
-    console.log(this.productDetails.id);
+    // console.log(this.cartProducts);
+    // console.log(this.productDetails.id);
     let existed = this.cartProducts.find(item=>item.item.id === this.productDetails.id);
     if(existed){
        this.buttonDisabled = true;
