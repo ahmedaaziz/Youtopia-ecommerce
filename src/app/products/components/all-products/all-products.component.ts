@@ -186,7 +186,7 @@ export class AllProductsComponent implements OnInit{
     });
 
     } else {
-      console.log('unchecked');
+      this.getProducts();
 
     }
   }
